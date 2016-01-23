@@ -1,11 +1,1 @@
-.navigation-menu {
-    list-style-type: none;
-}
-
-.navigation-menu li {
-    display: inline-block;
-    width: 250px;
-    text-align: center;
-    padding: 12px 24px;
-    border: 1px dashed #ccc;
-}
+.navigation-menu{list-style-type:none}.navigation-menu li{display:inline-block;width:250px;text-align:center;padding:12px 24px;border:1px dashed #ccc}

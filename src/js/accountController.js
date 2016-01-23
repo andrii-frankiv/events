@@ -1,20 +1,25 @@
-angular.module('eventsApp')
+(function() {
+    'use strict';
 
-    .controller('accountController', ['$scope', '$http', 'API_URL', function ($scope, $http, API_URL) {
-        angular.extend($scope, {
-            accounts: []
-        });
+    angular.module('eventsApp')
 
-        angular.extend($scope, {
-            getAccounts: function () {
-                $http.get(API_URL + '/accounts')
-                    .then(function successCallback(response) {
-                        console.log(response);
+        .controller('accountController', ['$scope', '$http', 'API_URL', function ($scope, $http, API_URL) {
+            angular.extend($scope, {
+                accounts: []
+            });
 
-                        $scope.accounts = response.data;
-                    })
-            }
-        });
+            angular.extend($scope, {
+                getAccounts: function () {
+                    $http.get(API_URL + '/accounts')
+                        .then(function successCallback(response) {
+                            console.log(response);
 
-        $scope.getAccounts();
-    }]);
+                            $scope.accounts = response.data;
+                        })
+                }
+            });
+
+            $scope.getAccounts();
+        }]);
+})();
+

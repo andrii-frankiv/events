@@ -1,22 +1,28 @@
-angular.module('eventsApp', ['ui.router'])
-    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/dashboard');
+(function() {
+    'use strict';
 
-        $stateProvider
+    angular.module('eventsApp')
 
-            .state('dashboard', {
-                url: '/dashboard',
-                templateUrl: 'views/partial-dashboard.html'
-            })
+        .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+            $urlRouterProvider.otherwise('/dashboard');
 
-            .state('events', {
-                url: '/events',
-                templateUrl: 'views/partial-events.html'
-            })
+            $stateProvider
 
-            .state('users', {
-                url: '/accounts',
-                controller: 'accountController',
-                templateUrl: 'views/partial-accounts.html'
-            });
-    }]);
+                .state('dashboard', {
+                    url: '/dashboard',
+                    templateUrl: 'views/partial-dashboard.html'
+                })
+
+                .state('events', {
+                    url: '/events',
+                    templateUrl: 'views/partial-events.html'
+                })
+
+                .state('users', {
+                    url: '/accounts',
+                    controller: 'accountController',
+                    templateUrl: 'views/partial-accounts.html'
+                });
+        }]);
+})();
+
