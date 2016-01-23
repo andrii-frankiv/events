@@ -18,8 +18,30 @@
                 })
 
                 .state('users', {
-                    url: '/users',
-                    templateUrl: 'views/partial-users.html'
+                    url: '/accounts',
+                    controller: 'accountController',
+                    templateUrl: 'views/partial-accounts.html'
                 });
+        })
+
+        .constant('API_URL', '/data')
+
+        .controller('accountController', function($scope, $http, API_URL) {
+            angular.extend($scope, {
+                accounts: []
+            });
+
+            angular.extend($scope, {
+                getAccounts: function() {
+                    $http.get(API_URL + '/accounts')
+                        .then(function successCallback(response) {
+                            console.log(response);
+
+                            $scope.accounts = response.data;
+                        })
+                }
+            });
+
+            $scope.getAccounts();
         });
 })();

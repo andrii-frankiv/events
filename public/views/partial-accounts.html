@@ -1,0 +1,15 @@
+<table class="table table-bordered" ng-controller="accountController">
+    <thead>
+    <tr>
+        <th>Username</th>
+        <th>Role</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr ng-repeat="account in accounts">
+        <td>{{ account.name }}</td>
+        <td>{{ account.role }} <a href="#" class="btn btn-danger btn-sm">Edit</a></td>
+    </tr>
+    </tbody>
+</table>

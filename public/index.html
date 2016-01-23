@@ -3,28 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Events application</title>
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-ui-router.min.js"></script>
-    <script src="js/app.js"></script>
-
-    <style>
-        .container {
-            width: 960px;
-            margin: 0 auto;
-        }
-
-        .navigation-menu {
-            list-style-type: none;
-        }
-
-        .navigation-menu li {
-            display: inline-block;
-            width: 250px;
-            text-align: center;
-            padding: 12px 24px;
-            border: 1px dashed #ccc;
-        }
-    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body ng-app="eventsApp">
 
@@ -42,5 +23,8 @@
     <div ui-view=""></div>
 </div>
 
+<script src="js/angular.min.js"></script>
+<script src="js/angular-ui-router.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
