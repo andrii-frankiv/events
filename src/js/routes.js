@@ -1,5 +1,5 @@
 angular.module('eventsApp', ['ui.router'])
-    .config([function ($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/dashboard');
 
         $stateProvider

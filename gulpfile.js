@@ -7,13 +7,13 @@ var uglify = require('gulp-uglify');
 
 var conf = {
     styles: {
-        src: './src/sass',
-        dest: './public/css'
+        src: 'src/sass',
+        dest: 'public/css'
     },
 
     js: {
-        src: './src/js',
-        dest: './public/js'
+        src: 'src/js',
+        dest: 'public/js'
     }
 };
 
@@ -24,7 +24,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('js', function() {
-    return gulp.src(conf.js.src + '/*.js')
+    return gulp.src(['src/js/routes.js', 'src/js/constants.js', conf.js.src + '/*.js'])
         .pipe(concat('app.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
